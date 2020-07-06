@@ -1,42 +1,25 @@
 import React, { Component } from "react";
 
+import axios from "axios";
+
 import PostCard from "./postCard.jsx";
 
 class Posts extends Component {
   state = {
-    posts: [
-      {
-        id: 1,
-        cardInfo: {
-          heading: "Competitive Programming",
-          image: require("../../assets/cpcard.png"),
-          alt: "Competitive Programming",
-          text:
-            "Get ready to learn to compete! A track for mastering Competitive Programming.",
-        },
-      },
-      {
-        id: 2,
-        cardInfo: {
-          heading: "Python Language Proficiency",
-          image: require("../../assets/pycard.png"),
-          alt: "Python Champion",
-          text:
-            "This track is for mastering Python. Follow this and become the master in Python.",
-        },
-      },
-      {
-        id: 3,
-        cardInfo: {
-          heading: "C++ Language Proficiency",
-          image: require("../../assets/cppcard.png"),
-          alt: "C++ Champion",
-          text:
-            "This track is for mastering C++. Follow this and become the master in C++.",
-        },
-      },
-    ],
+    posts: [],
   };
+
+  componentDidMount() {
+    axios
+      .get("http://localhost:8000/api/postcard/")
+      .then((response) => {
+        console.log(response.data);
+        this.setState({ posts: response.data });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
   render() {
     return (
       <div className="container" id="practise">

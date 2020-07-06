@@ -5,7 +5,7 @@ import Carousel from "nuka-carousel";
 class CarouselMapped extends Component {
   render() {
     return (
-      <Carousel autoplay="true">
+      <Carousel autoplay={true}>
         <img
           src={require("../../assets/cp-carousel.png")}
           alt="Competitive Programming"
