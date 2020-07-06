@@ -42,28 +42,3 @@ class Footer extends Component {
 }
 
 export default Footer;
-
-/*
-      <footer>
-        <ul>
-          {this.state.creators.map(creator => 
-            <li class="list-group-item d-flex justify-content-between align-items-center" key={creator}>
-            {creator.name}
-            <i className="fa fa-linkedin" href={creator.linkedin} ></i>
-          </li>)}
-        </ul>
-      </footer>
-
-
-
-
-
-
-
-      <ul className="text-white">
-      <li><a href="https://www.linkedin.com/in/harsh-kanani-69a45818b/">Harsh Kannani</a></li>
-    <li> <a href="https://www.linkedin.com/in/jainam-desai/">Jainam Desai</a></li>
-    <li><a href="https://www.linkedin.com/in/aayush-chodvadiya/">Aayush Chodvadiya</a></li>
-      </ul>
-
-*/

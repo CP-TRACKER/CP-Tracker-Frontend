@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./header.css";
 
+import Image from "react-bootstrap/Image";
+
 import Login from "../../elements/loginSignup/loginSignup.jsx";
 
 class Header extends Component {
@@ -18,7 +20,7 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="logo">
-          <img src={require("../../assets/logo.png")} alt="logo" width="40" />
+          <Image src={require("../../assets/logo.png")} alt="logo" width="40" />
         </div>
         <h2>Competitive Programming </h2>
         <LoggedIn username={this.state.username} />
