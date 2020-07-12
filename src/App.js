@@ -1,24 +1,19 @@
 import React from "react";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.css"
-import "font-awesome/css/font-awesome.css"
+import "bootstrap/dist/css/bootstrap.css";
+import "font-awesome/css/font-awesome.css";
 
-import Header from "./components/header/header";
-import CarouselMapped from "./components/carousel/carousel.jsx";
-import Posts from "./components/posts/posts.jsx";
-import MiddleGreeting from "./components/midSection/midSection.jsx";
-import Footer from "./components/footer/footer.jsx";
-
+/*
+import HomePage from "./pages/homePage.jsx";
+import CPPage from "./pages/cpPage.jsx";
+*/
+import ProlemPage from "./pages/problemPage.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <CarouselMapped />
-      <Posts />
-      <MiddleGreeting />
-      <Footer />
-    </div>
+    <React.Fragment>
+      <ProlemPage />
+    </React.Fragment>
   );
 }
 
