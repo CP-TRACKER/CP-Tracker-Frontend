@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./postCard.css";
-
 export default function PostCard({ cardInfo }) {
   return (
     <div className="col-md-4 postcard">

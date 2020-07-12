@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./midSection.css";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -16,7 +15,7 @@ class MidGreeting extends Component {
   render() {
     return (
       <Row>
-        <div className="justify-content-around p-4 bg-dark text-white">
+        <div className="justify-content-around p-4 bg-dark text-center text-white">
           <div className="justify-content-between m-3">
             <h2>We help you to practise!</h2>
             <p>{this.state.text1}</p>

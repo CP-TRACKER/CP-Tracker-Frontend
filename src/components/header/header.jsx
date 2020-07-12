@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./header.css";
 
 import Image from "react-bootstrap/Image";
 
@@ -31,6 +30,6 @@ class Header extends Component {
 
 export default Header;
 
-// TODO: 
+// TODO:
 // - Modify to API Call.
 // - Add user profile.

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./footer.css";
 
 import Creators from "../../elements/creators/creators.jsx";
 import Community from "../../elements/community/community.jsx";
@@ -10,7 +9,7 @@ class Footer extends Component {
     return (
       <footer>
         <div className="content-3">
-          <div className="text-white pt-3">
+          <div className="text-white pt-3 text-center">
             <h2 className="d-inline-flex">Subscribe Newsletter</h2>
             <form>
               <input
