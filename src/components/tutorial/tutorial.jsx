@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import TutorialTable from "../../elements/tutorialTable/tutorialTable.jsx";
 
+import BackButton from "../../elements/backButton/backButton.jsx";
+
 class Tutorial extends Component {
   state = {
     rowsForTutorials: [
@@ -43,6 +45,7 @@ class Tutorial extends Component {
             ))}
           </tbody>
         </table>
+        <BackButton />
       </div>
     );
   }

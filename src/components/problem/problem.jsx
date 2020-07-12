@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+
 import ProblemTable from "../../elements/problemTable/problenTable.jsx";
+import BackButton from "../../elements/backButton/backButton.jsx";
 
 class Problem extends Component {
   state = {
@@ -47,6 +49,7 @@ class Problem extends Component {
             ))}
           </tbody>
         </table>
+        <BackButton />
       </div>
     );
   }
