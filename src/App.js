@@ -6,7 +6,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
 
 import HomePage from "./pages/homePage.jsx";
-import CPPage from "./pages/cpPage.jsx";
 import ProblemPage from "./pages/problemPage.jsx";
 
 function App() {
@@ -15,9 +14,6 @@ function App() {
       <Switch>
         <Route path="/problem">
           <ProblemPage />
-        </Route>
-        <Route path="/cp">
-          <CPPage />
         </Route>
         <Route path="/">
           <HomePage />

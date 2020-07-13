@@ -1,34 +1,24 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 import ProblemTable from "../../elements/problemTable/problenTable.jsx";
 import BackButton from "../../elements/backButton/backButton.jsx";
 
 class Problem extends Component {
   state = {
-    rowsForProblems: [
-      {
-        id: 1,
-        topic: "Maths",
-        link: "link1",
-        solution: "solution_link",
-      },
-
-      {
-        id: 2,
-
-        topic: "arrays",
-        link: "link2",
-        solution: "solution_link",
-      },
-      {
-        id: 3,
-
-        topic: "recursion",
-        link: "link3",
-        solution: "solution_link",
-      },
-    ],
+    rowsProblems: [],
   };
+
+  componentDidMount() {
+    axios
+      .get("http://localhost:8000/api/postcard/cp/cp-problem")
+      .then((response) => {
+        this.setState({ rowsProblems: response.data });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   render() {
     return (
@@ -39,12 +29,13 @@ class Problem extends Component {
             <tr>
               <th>Sr.</th>
               <th>Topics</th>
-              <th>Links</th>
-              <th>Solutions</th>
+              <th>Difficulty Level</th>
+              <th>Problem Name</th>
+              <th>Solution</th>
             </tr>
           </thead>
           <tbody>
-            {this.state.rowsForProblems.map((row) => (
+            {this.state.rowsProblems.map((row) => (
               <ProblemTable key={row.id} rowInfo={row} />
             ))}
           </tbody>
