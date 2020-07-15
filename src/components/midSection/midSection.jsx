@@ -13,15 +13,17 @@ class MidGreeting extends Component {
   };
   render() {
     return (
-      <Container>
-        <div className="flex-column d-flex p-4 bg-dark text-center text-white">
-          <Row>
-            <div className="justify-content-between">
-              <h2>We help you to practise!</h2>
-              <p>{this.state.text1}</p>
-            </div>
+      <Container className="mid-section-div">
+        <div className=" flex-column">
+          <Row className="p-2">
+            <Container className="border-none">
+              <div className="justify-content-between">
+                <h2>We help you to practise!</h2>
+                <p>{this.state.text1}</p>
+              </div>
+            </Container>
           </Row>
-          <Row>
+          <Row className="p-2">
             <Col>
               <h4>Our Mission</h4>
               <p>{this.state.text2}</p>

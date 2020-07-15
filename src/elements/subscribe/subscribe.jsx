@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import { Container, Button, Row } from "react-bootstrap";
+
 class Subscribe extends Component {
   constructor(props) {
     super(props);
@@ -35,27 +37,27 @@ class Subscribe extends Component {
   }
   render() {
     return (
-      <div className="text-white pt-3 text-center">
-        <h2 className="d-inline-flex">Subscribe Newsletter</h2>
-        <form>
-          <input
-            className="p-2"
-            id="emailBox"
-            type="text"
-            placeholder="Enter Your Email Address"
-            size="40"
-            defaultValue={this.state.email}
-            onChange={this.handleChange}
-          />
-          <button
-            type="submit"
-            onClick={this.postEmail}
-            className="btn btn-success"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+      <Container className="border-none">
+        <div className="text-white p-3 ">
+          <Row className="justify-content-center">
+            <h2>Subscribe Newsletter</h2>
+          </Row>
+          <Row className="justify-content-center">
+            {" "}
+            <input
+              id="emailBox"
+              type="text"
+              placeholder="Enter Your Email Address"
+              size="40"
+              defaultValue={this.state.email}
+              onChange={this.handleChange}
+            />
+            <Button type="submit" variant="success" onClick={this.postEmail}>
+              Submit
+            </Button>
+          </Row>
+        </div>
+      </Container>
     );
   }
 }

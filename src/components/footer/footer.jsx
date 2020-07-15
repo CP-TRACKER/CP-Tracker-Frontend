@@ -9,11 +9,10 @@ import Subscribe from "../../elements/subscribe/subscribe.jsx";
 class Footer extends Component {
   render() {
     return (
-      <Container>
-        <div className="content-3">
-          <Row className="d-flex justify-content-center"></Row>
-          <Row>
-            <div className="container p-3">
+      <Container className="footer-div">
+        <Row>
+          <Container>
+            <div className="p-3">
               <Subscribe />
               <br />
               <div className="footer border-top ">
@@ -25,8 +24,8 @@ class Footer extends Component {
                 </div>
               </div>
             </div>
-          </Row>
-        </div>
+          </Container>
+        </Row>
       </Container>
     );
   }
