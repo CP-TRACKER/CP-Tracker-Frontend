@@ -6,11 +6,14 @@ import Problem from "../components/problem/problem.jsx";
 import MiddleGreeting from "../components/midSection/midSection.jsx";
 import Footer from "../components/footer/footer.jsx";
 
-class ProblemPage extends Component {
+class PythonPage extends Component {
   state = {
-    tutorial: "https://cp-track.herokuapp.com/api/postcard/cp/cp-tutorial",
-    problem: "https://cp-track.herokuapp.com/api/postcard/cp/cp-problem",
+    tutorial:
+      "https://cp-track.herokuapp.com/api/postcard/python/python-tutorial",
+    problem:
+      "https://cp-track.herokuapp.com/api/postcard/python/python-problem",
   };
+
   render() {
     return (
       <React.Fragment>
@@ -24,4 +27,4 @@ class ProblemPage extends Component {
   }
 }
 
-export default ProblemPage;
+export default PythonPage;

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Container } from "react-bootstrap";
 
 import ProblemTable from "../../elements/problemTable/problenTable.jsx";
 import BackButton from "../../elements/backButton/backButton.jsx";
@@ -10,9 +11,11 @@ class Problem extends Component {
   };
 
   componentDidMount() {
+    console.log(this.props.problem);
     axios
-      .get("http://localhost:8000/api/postcard/cp/cp-problem")
+      .get(this.props.problem)
       .then((response) => {
+        console.log(response.data);
         this.setState({ rowsProblems: response.data });
       })
       .catch((error) => {
@@ -22,9 +25,9 @@ class Problem extends Component {
 
   render() {
     return (
-      <div className="p-5">
+      <Container className="p-5">
         <h2>Problems</h2>
-        <table class="content-table">
+        <table className="content-table">
           <thead>
             <tr>
               <th>Sr.</th>
@@ -41,7 +44,7 @@ class Problem extends Component {
           </tbody>
         </table>
         <BackButton />
-      </div>
+      </Container>
     );
   }
 }

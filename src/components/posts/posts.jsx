@@ -10,7 +10,7 @@ class Posts extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:8000/api/postcard/")
+      .get("https://cp-track.herokuapp.com/api/postcard/")
       .then((response) => {
         this.setState({ posts: response.data });
       })

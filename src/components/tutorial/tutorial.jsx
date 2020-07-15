@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Container } from "react-bootstrap";
 
 import TutorialTable from "../../elements/tutorialTable/tutorialTable.jsx";
 
@@ -9,9 +10,9 @@ class Tutorial extends Component {
   };
   componentDidMount() {
     axios
-      .get("http://localhost:8000/api/postcard/cp/cp-tutorial")
+      .get(this.props.tutorial)
       .then((response) => {
-        // Temporary Workaround
+        console.log(response.data);
         this.setState({ rowsTutorials: response.data });
       })
       .catch((error) => {
@@ -20,7 +21,7 @@ class Tutorial extends Component {
   }
   render() {
     return (
-      <div className="p-5">
+      <Container className="p-5">
         <h2>Tutorials</h2>
         <table className="content-table">
           <thead>
@@ -37,7 +38,7 @@ class Tutorial extends Component {
             ))}
           </tbody>
         </table>
-      </div>
+      </Container>
     );
   }
 }
