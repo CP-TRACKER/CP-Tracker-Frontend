@@ -18,7 +18,6 @@ class Subscribe extends Component {
     const body = {
       email: this.state.email,
     };
-    console.log(body);
     axios({
       method: "POST",
       url: "https://cp-track.herokuapp.com/api/subscribers/",
