@@ -25,31 +25,29 @@ class Creators extends Component {
   };
   render() {
     return (
-      <div className="col-3 justify-content-start">
-        <div className="d-flex flex-column text-white">
-          <h5>Creators</h5>
-          {this.state.creators.map((creator) => (
-            <p className="d-print-none" key={creator.key}>
-              {creator.name}
-              <a
-                href={creator.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="icon-button linkedin"
-              >
-                <i className="fa fa-linkedin"></i>
-              </a>
-              <a
-                href={creator.github}
-                className="icon-button github"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa fa-github"></i>
-              </a>
-            </p>
-          ))}
-        </div>
+      <div className="d-flex flex-column">
+        <h5>Creators</h5>
+        {this.state.creators.map((creator) => (
+          <p className="d-print-none" key={creator.key}>
+            {creator.name}
+            <a
+              href={creator.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-button linkedin"
+            >
+              <i className="fa fa-linkedin"></i>
+            </a>
+            <a
+              href={creator.github}
+              className="icon-button github"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa fa-github"></i>
+            </a>
+          </p>
+        ))}
       </div>
     );
   }

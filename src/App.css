@@ -6,10 +6,6 @@
 
 @import "./components/footer/footer.css";
 
-#root {
-  background-color: black;
-}
-
 .container {
   border: 1px solid;
   border-color: white;

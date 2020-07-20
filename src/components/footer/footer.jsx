@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import Creators from "../../elements/creators/creators.jsx";
 import Community from "../../elements/community/community.jsx";
@@ -17,11 +17,17 @@ class Footer extends Component {
               <br />
               <div className="footer border-top ">
                 <br />
-                <div className="row justify-content-around text-white">
-                  <Creators />
-                  <Community />
-                  <ContactUs />
-                </div>
+                <Row className="justify-content-around">
+                  <Col sm={4}>
+                    <Creators />
+                  </Col>
+                  <Col sm={4}>
+                    <Community />
+                  </Col>
+                  <Col sm={4}>
+                    <ContactUs />
+                  </Col>
+                </Row>
               </div>
             </div>
           </Container>

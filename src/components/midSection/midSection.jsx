@@ -24,11 +24,11 @@ class MidGreeting extends Component {
             </Container>
           </Row>
           <Row className="p-2">
-            <Col>
+            <Col sm={6}>
               <h4>Our Mission</h4>
               <p>{this.state.text2}</p>
             </Col>
-            <Col>
+            <Col sm={6}>
               <h4>Our Vision</h4>
               <p>{this.state.text3}</p>
             </Col>

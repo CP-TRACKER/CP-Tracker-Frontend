@@ -38,12 +38,11 @@ class Subscribe extends Component {
   render() {
     return (
       <Container className="border-none">
-        <div className="text-white p-3 ">
-          <Row className="justify-content-center">
+        <div className="p-3 ">
+          <Row className="justify-content-center text-center">
             <h2>Subscribe Newsletter</h2>
           </Row>
           <Row className="justify-content-center">
-            {" "}
             <input
               id="emailBox"
               type="text"
