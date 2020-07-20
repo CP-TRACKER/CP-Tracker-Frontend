@@ -26,7 +26,7 @@ class Creators extends Component {
   };
   render() {
     return (
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column text-center pt-2">
         <h5>Creators</h5>
         {this.state.creators.map((creator) => (
           <p className="d-print-none" key={creator.key}>

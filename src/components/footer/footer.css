@@ -1,7 +1,8 @@
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
+
 .icons {
   display: flex;
   flex-direction: row;

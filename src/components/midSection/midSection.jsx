@@ -16,7 +16,7 @@ class MidGreeting extends Component {
       <Container className="mid-section-div">
         <div className=" flex-column">
           <Row className="p-2">
-            <Container className="border-none">
+            <Container className="border-top pt-2">
               <div className="justify-content-between">
                 <h2>We help you to practise!</h2>
                 <p>{this.state.text1}</p>

@@ -9,13 +9,13 @@ import Subscribe from "../../elements/subscribe/subscribe.jsx";
 class Footer extends Component {
   render() {
     return (
-      <Container className="footer-div">
+      <Container fluid={true} className="footer-div bg-dark text-white">
         <Row>
           <Container>
             <div className="p-3">
               <Subscribe />
               <br />
-              <div className="footer border-top ">
+              <div className="footer">
                 <br />
                 <Row className="justify-content-around">
                   <Col sm={4}>

@@ -10,7 +10,7 @@ class ContactUs extends Component {
   };
   render() {
     return (
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column text-center pt-2">
         <h5>Connect & Contact Us</h5>
         <div className="icon-button-contactus">
           <a href={this.state.instagram}>

@@ -5,7 +5,7 @@ import { Container, Image } from "react-bootstrap";
 class Header extends Component {
   render() {
     return (
-      <Container className="header-div">
+      <Container fluid={true} className="header-div bg-dark">
         <div className="row header">
           <Image
             className="logo"
